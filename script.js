@@ -22,9 +22,17 @@ function startGame() {
             flagX = 0;
         }
         if (flagX) {
-            x -= 3;
+            if (box.offsetWidth < 500) {
+                x -= 2;
+            } else {
+                x -= 3;
+            }
         } else {
-            x += 3;
+            if (box.offsetWidth < 500) {
+                x += 2;
+            } else {
+                x += 3;
+            }
         }
         let ballpos = ball.getBoundingClientRect();
         let barpos = bar.getBoundingClientRect();
@@ -34,9 +42,17 @@ function startGame() {
             flagY = 0;
         }
         if (flagY) {
-            y -= 3;
+            if (box.offsetWidth < 500) {
+                y -= 2;
+            } else {
+                y -= 3;
+            }
         } else {
-            y += 3;
+            if (box.offsetWidth < 500) {
+                y += 2;
+            } else {
+                y += 3;
+            }
         }
 
         if (ballpos.bottom >= barpos.top) {
