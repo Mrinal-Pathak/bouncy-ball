@@ -87,7 +87,7 @@ header {
     border: 10px solid blue;
     border-bottom: 2px dotted white;
     overflow: hidden;
-
+    overflow-x: hidden;
 }
 
 #ball {
